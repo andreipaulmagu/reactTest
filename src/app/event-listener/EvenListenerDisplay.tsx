@@ -8,9 +8,7 @@ export default function EvenListenerDisplay() {
     addEventListener("resize", (event) => { });
 
     onresize = (event) => {
-      if (window.innerWidth < windowWidthDisplay) {
-        setWindowWidthDisplay(window.innerWidth)
-      }
+      setWindowWidthDisplay(window.innerWidth)
     };
 
   }, [windowWidthDisplay]);
