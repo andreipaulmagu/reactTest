@@ -1,5 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import 'bootstrap/dist/css/bootstrap.css';
+import Link from 'next/link';
+import styles from './page.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +18,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={"d-flex justify-content-center align-items-center " + inter.className}>
+        <div className='d-grid'>
+          <div className='d-flex justify-content-between'>
+            <Link href='/counter'>Counter</Link>
+            <Link href='/task-list'>Task List</Link>
+            <Link href='/event-listener'>Event Listeners</Link>
+            <Link href='/manipulate-numbers'>Manipulate Numbers</Link>
+          </div>
+          <div className={'d-flex justify-content-center m-3 ' + styles.container}>
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   )
 }

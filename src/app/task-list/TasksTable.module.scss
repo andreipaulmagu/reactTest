@@ -1,0 +1,17 @@
+.pendingRow {
+  background-color: burlywood;
+}
+
+.doneRow {
+  background-color: lightgreen;
+}
+
+.taskTable {
+  border: 1px solid #ccc;
+  width: 100%;
+  td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+}
